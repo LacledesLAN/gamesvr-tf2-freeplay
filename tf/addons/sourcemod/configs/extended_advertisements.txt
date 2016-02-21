@@ -1,56 +1,37 @@
 "Advertisements" 
-2 { 
-3 	"1" 
-4 	{ 
-5 		"type"		"S" 
-6 		"text"		"{ORANGE}Next map change is in {TIMELEFT}." 
-7 		"flags"		"" 
-8 	} 
-9 	"2" 
-10 	{ 
-11 		"type"		"S" 
-12 		"text"		"{ORANGE}Current map: {DEFAULT}{CURRENTMAP}" 
-13 	} 
-14 	"3" 
-15 	{ 
-16 		"type"		"S" 
-17 		"text"		"{ORANGE}Join our Steam group! http://steamcommunity.com/groups/lacledes_lan" 
-18 		"flags"		"" 
-19 	}		 
-20 	"4" 
-21 	{ 
-22 		"type"		"S" 
-23 		"text"		"{ORANGE}Just say '!nominate' to nominate a map for voting." 
-24 		"flags"		"" 
-25 	} 
-26 	"5" 
-27 	{ 
-28 		"type"		"S" 
-29 		"text"		"{ORANGE}Say '!rtv' in order to call for a mapvote." 
-30 		"flags"		"" 
-31 	} 
-32 	"6" 
-33 	{ 
-34 		"type"		"S" 
-35 		"text"		"{ORANGE}We're on Twitter! Tweet us at @LacledesLAN." 
-36 		"flags"		"" 
-37 	}	 
-38 	"7" 
-39 	{ 
-40 		"type"		"S" 
-41 		"text"		"{ORANGE}If there are any problems feel free to talk to the staff at the admin table." 
-42 		"flags"		"" 
-43 	} 
-44 	"8" 
-45 	{ 
-46 		"type"		"S" 
-47 		"text"		"{ORANGE}Alltalk is handled by a plugin. Currently sv_alltalk is {DEFAULT}{CONVAR_BOOL:sv_alltalk}." 
-48 		"flags"		"" 
-49 	} 
-50 	"9" 
-51 	{ 
-52 		"type"		"S" 
-53 		"text"		"{ORANGE} Aim for the admins. They like getting shot. Really!" 
-54 		"flags"		"" 
-55 	} 
-56 } 
+{ 
+	"1" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Your partner cannot read these messages. Please read them to him or her aloud. Thanks!" 
+	} 
+	"2" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Current map: {DEFAULT}{CURRENTMAP}" 
+	} 
+  "3" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Join our Steam group! http://steamcommunity.com/groups/lacledes_lan" 
+		"flags"		"" 
+	}		 
+	"4" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}We're on Twitter! Tweet us at @LacledesLAN." 
+		"flags"		"" 
+	}	 
+	"5" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}If there are any problems feel free to talk to the staff at the admin table." 
+		"flags"		"" 
+	} 
+	"6" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Alltalk is handled by a plugin. Currently sv_alltalk is {DEFAULT}{CONVAR_BOOL:sv_alltalk}." 
+		"flags"		"" 
+	} 
+} 
