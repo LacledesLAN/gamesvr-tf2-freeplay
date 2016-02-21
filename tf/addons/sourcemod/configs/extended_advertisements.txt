@@ -2,34 +2,55 @@
 {
 	"1"
 	{
-		"type"		"C"
-		"text"		"www.domain.com"
+		"type"		"S"
+		"text"		"{ORANGE}Next map change is in {TIMELEFT} minutes."
+		"flags"		""
 	}
 	"2"
 	{
-		"type"		"CH"
-		"text"		"contact@domain.com"
+		"type"		"S"
+		"text"		"{ORANGE}Current map: {DEFAULT}{CURRENTMAP}"
 	}
 	"3"
 	{
-		"type"		"M"
-		"text"		"Next map is {NEXTMAP} in {TIMELEFT} minutes."
-		"flags"		"cft"
-	}
+		"type"		"S"
+		"text"		"{ORANGE}Join our Steam group. http://steamcommunity.com/groups/lacledes_lan"
+		"flags"		""
+	}		
 	"4"
 	{
 		"type"		"S"
-		"text"		"{GREEN}Current {LIGHTGREEN}Map: {DEFAULT}{CURRENTMAP}"
+		"text"		"{ORANGE}Just say '!nominate' to nominate a map for voting"
+		"flags"		""
 	}
 	"5"
 	{
-		"type"		"T"
-		"text"		"{ORANGE}friendly fire is {CONVAR_BOOL:mp_friendlyfire}."
+		"type"		"S"
+		"text"		"{ORANGE}Say '!rtv' in order to call for a mapvote."
+		"flags"		""
 	}
 	"6"
 	{
 		"type"		"S"
-		"text"		"{GREEN}Admins: Sourcemod version is {CONVAR:sourcemod_version} and advertisement plugin version is {CONVAR:sm_extended_advertisements_version}"
-		"flags"		"z"
+		"text"		"{ORANGE}We are on Twitter. @LacledesLAN"
+		"flags"		""
+	}	
+	"7"
+	{
+		"type"		"S"
+		"text"		"{ORANGE}If there is any problems let us know at the admin table."
+		"flags"		""
+	}
+	"8"
+	{
+		"type"		"S"
+		"text"		"{ORANGE}Alltalk is handled by a plugin. Currently sv_alltalk is {DEFAULT}{CONVAR_BOOL:sv_alltalk}"
+		"flags"		""
+	}
+	"9"
+	{
+		"type"		"S"
+		"text"		"{ORANGE} The MVM robot is the admin."
+		"flags"		""
 	}
 }
