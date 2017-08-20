@@ -1,22 +1,20 @@
 # escape=`
 
-FROM lacledeslan/gamesvr-srcds-tf2:linux
+FROM lacledeslan/gamesvr-tf2
 
 LABEL maintainer "Laclede's LAN <contact@lacledeslan.com>"
 
-ENV IMAGE="gamesvr-srcds-tf2-freeplay:linux"
+ENV IMAGE="gamesvr-tf2-freeplay"
 
 HEALTHCHECK NONE
 
-USER root
+COPY ./dist /app/tf/
 
-COPY ./dist /app/bin/
+COPY ./dist.linux /app/tf/
 
-COPY ./dist.linux /app/bin/tf/
+# UPDATE USERNAME
+RUN usermod -l TF2Freeplay TF2
 
-# CLEAN UP
-RUN usermod -l TF2.Freeplay TF2
+USER TF2Freeplay
 
-USER TF2.Freeplay
-	
-WORKDIR /app/bin/
+WORKDIR /app/
