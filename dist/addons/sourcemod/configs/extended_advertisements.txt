@@ -1,35 +1,51 @@
-"Advertisements"
-{
-	"1"
-	{
-		"type"		"C"
-		"text"		"www.domain.com"
-	}
-	"2"
-	{
-		"type"		"CH"
-		"text"		"contact@domain.com"
-	}
-	"3"
-	{
-		"type"		"M"
-		"text"		"Next map is {NEXTMAP} in {TIMELEFT} minutes."
-		"flags"		"cft"
-	}
-	"4"
-	{
-		"type"		"S"
-		"text"		"{GREEN}Current {LIGHTGREEN}Map: {DEFAULT}{CURRENTMAP}"
-	}
-	"5"
-	{
-		"type"		"T"
-		"text"		"{ORANGE}friendly fire is {CONVAR_BOOL:mp_friendlyfire}."
-	}
-	"6"
-	{
-		"type"		"S"
-		"text"		"{GREEN}Admins: Sourcemod version is {CONVAR:sourcemod_version} and advertisement plugin version is {CONVAR:sm_extended_advertisements_version}"
-		"flags"		"z"
-	}
-}
+"Advertisements" 
+{ 
+	"1" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Next map change is in {TIMELEFT}." 
+		"flags"		"" 
+	} 
+	"2" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Current map: {DEFAULT}{CURRENTMAP}" 
+	} 
+	"3" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Join our Steam group! http://steamcommunity.com/groups/lacledes_lan." 
+		"flags"		"" 
+	}		 
+	"4" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Use the TF2 voting system to change maps." 
+		"flags"		"" 
+	} 
+	"5" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}We're on Twitter! Tweet us at @LacledesLAN." 
+		"flags"		"" 
+	}	 
+	"6" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}If there are any problems feel free to talk to the staff at the admin table." 
+		"flags"		"" 
+	} 
+	"7" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE}Alltalk is handled by a plugin. Currently sv_alltalk is {DEFAULT}{CONVAR_BOOL:sv_alltalk}." 
+		"flags"		"" 
+	} 
+	"8" 
+	{ 
+		"type"		"S" 
+		"text"		"{ORANGE} Aim for the admins. They like getting shot. Really!" 
+		"flags"		"" 
+	} 
+} 
+
