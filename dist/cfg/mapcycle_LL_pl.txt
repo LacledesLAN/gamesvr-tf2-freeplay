@@ -37,3 +37,4 @@ pl_thundermountain
 pl_upward
 pl_vipersden_b2
 pl_yamashiro_b3
+pl_enclosure

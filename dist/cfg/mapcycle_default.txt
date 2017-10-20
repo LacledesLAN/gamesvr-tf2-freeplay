@@ -54,3 +54,8 @@ cp_snakewater_final1
 cp_sunshine
 cp_metalworks
 pl_swiftwater_final1
+cp_mossrock
+cp_mercenarypark
+koth_lazarus
+koth_brazil
+plr_bananabay_rc4
