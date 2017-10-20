@@ -223,3 +223,8 @@ plr_nightfall_final
 plr_panic_b2 
 plr_pipeline 
 plr_vegas_b01 
+cp_mossrock
+cp_mercenarypark
+koth_lazarus
+koth_brazil
+plr_bananabay_rc4

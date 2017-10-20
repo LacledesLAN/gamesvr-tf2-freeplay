@@ -59,3 +59,5 @@ cp_vector_v1
 cp_warpath
 cp_well
 cp_yukon_final
+cp_mercenarypark
+cp_mossrock

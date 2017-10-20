@@ -52,3 +52,5 @@ koth_viaduct_event
 koth_visual_b1
 koth_warehouse
 koth_winter_ridge_b2
+koth_lazarus
+koth_brazil
