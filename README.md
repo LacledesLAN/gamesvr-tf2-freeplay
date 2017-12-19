@@ -1,13 +1,24 @@
-# gamesvr-srcds-tf2-freeplay
-Docker image for LL [Team Fortress 2](http://store.steampowered.com/app/440/) "Freeplay" servers.
+# LL Team Fortress 2 Dedicated Freeplay Server in Docker
 
-# Linux Container
-[![](https://images.microbadger.com/badges/image/lacledeslan/gamesvr-srcds-tf2-freeplay:linux.svg)](https://microbadger.com/images/lacledeslan/gamesvr-srcds-tf2-freeplay:linux "Get your own image badge on microbadger.com")
-```
-docker pull lacledeslan/gamesvr-srcds-tf2-freeplay:linux
+## Linux Container
+
+[![](https://images.microbadger.com/badges/version/lacledeslan/gamesvr-tf2-freeplay.svg)](https://microbadger.com/images/lacledeslan/gamesvr-tf2-freeplay "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/lacledeslan/gamesvr-tf2-freeplay.svg)](https://microbadger.com/images/lacledeslan/gamesvr-tf2-freeplay "Get your own image badge on microbadger.com")
+
+### Download
+
+```shell
+docker pull lacledeslan/gamesvr-tf2-freeplay
 ```
 
-# Build Triggers
-Automated builds of this image can be triggered by the following sources:
-* [Commits on GitHub](https://github.com/LacledesLAN/gamesvr-srcds-tf2-freeplay)
-* [Upstream build of lacledeslan/gamesvr-srcds-tf2](https://hub.docker.com/r/lacledeslan/gamesvr-srcds-tf2/)
+## Run self tests
+
+```shell
+docker run -it --rm lacledeslan/gamesvr-tf2 ./ll-tests/gamesvr-tf2-freeplay.sh
+```
+
+## Run simple interactive server
+
+```shell
+docker run -it --rm --net=host lacledeslan/gamesvr-tf2-freeplay ./srcds_run -game tf +randommap +sv_lan 1
+```
