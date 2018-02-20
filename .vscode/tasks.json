@@ -6,7 +6,7 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "docker pull lacledeslan/gamesvr-tf2; docker build . -f Dockerfile.linux -t ll/gamesvr-tf2-freeplay --no-cache --build-arg BUILDNODE=$env:computername;",
+            "command": "docker pull lacledeslan/gamesvr-tf2; docker build . -f Dockerfile.linux -t lltest/gamesvr-tf2-freeplay --no-cache --build-arg BUILDNODE=$env:computername;",
             "dependsOn": "download-sub-modules",
             "group": "build",
             "identifier": "build-image",
@@ -16,7 +16,7 @@
         {
             "label": "Build & Execute Self Tests",
             "type": "shell",
-            "command": "docker run -it --rm ll/gamesvr-tf2-freeplay ./ll-tests/gamesvr-tf2-freeplay.sh;",
+            "command": "docker run -it --rm lltest/gamesvr-tf2-freeplay ./ll-tests/gamesvr-tf2-freeplay.sh;",
             "dependsOn": "build-image",
             "group": {
                 "kind": "build",
@@ -28,7 +28,7 @@
         {
             "label": "Build & Run Interactive Server",
             "type": "shell",
-            "command": "docker run -it --net=host ll/gamesvr-tf2-freeplay docker run -it --rm --net=host ll/gamesvr-tf-freeplay ./srcds_run -game tf +randommap +sv_lan 1 +usercon +rcon_password \"test123\";",
+            "command": "docker run -it --net=host lltest/gamesvr-tf2-freeplay docker run -it --rm --net=host ll/gamesvr-tf-freeplay ./srcds_run -game tf +randommap +sv_lan 1 +usercon +rcon_password \"test123\";",
             "dependsOn": "build-image",
             "group": "build",
             "problemMatcher": [],
@@ -37,7 +37,7 @@
         {
             "label": "Build & Shell In",
             "type": "shell",
-            "command": "docker run -it --net=host --rm ll/gamesvr-tf2-freeplay;",
+            "command": "docker run -it --net=host --rm lltest/gamesvr-tf2-freeplay;",
             "dependsOn": "build-image",
             "group": "build",
             "problemMatcher": [],
