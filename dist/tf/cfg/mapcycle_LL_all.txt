@@ -205,6 +205,7 @@ pl_pharaoh_b18a
 pl_promotion_b4 
 pl_repository_rc3 
 pl_rivercrossing_rc2a 
+pl_skirmish_b2
 pl_silo_plant_no6_b3 
 pl_snowtop_b1 
 pl_snowycoast 
