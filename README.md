@@ -14,7 +14,7 @@ docker pull lacledeslan/gamesvr-tf2-freeplay
 ## Run self tests
 
 ```shell
-docker run -it --rm lacledeslan/gamesvr-tf2 ./ll-tests/gamesvr-tf2-freeplay.sh
+docker run -it --rm lacledeslan/gamesvr-tf2-freeplay ./ll-tests/gamesvr-tf2-freeplay.sh;
 ```
 
 ## Run simple interactive server
