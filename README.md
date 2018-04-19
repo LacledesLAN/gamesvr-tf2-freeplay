@@ -8,7 +8,7 @@
 ### Download
 
 ```shell
-docker pull lacledeslan/gamesvr-tf2-freeplay
+docker pull lacledeslan/gamesvr-tf2-freeplay;
 ```
 
 ## Run self tests
