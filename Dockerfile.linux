@@ -15,30 +15,21 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
       org.label-schema.description="LL Team Fortress 2 Dedicated Freeplay Server" `
       org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-tf2-freeplay"
 
-COPY ./sourcemod.linux /app/tf/
-
-COPY ./sourcemod-configs /app/tf/
-
-COPY ./dist /app/
-
-COPY ./ll-tests/*.sh /app/ll-tests
-
-RUN chmod +rx /app/ll-tests/*.sh &&`
-    chmod +rwx /app/ll-tests &&`
-    chown TF2:root -R /app/ll-tests;
+COPY --chown=TF2:root ./sourcemod.linux /app/tf/
+COPY --chown=TF2:root ./sourcemod-configs /app/tf/
+COPY --chown=TF2:root ./dist /app/
+COPY --chown=TF2:root ./ll-tests/*.sh /app/ll-tests
 
 # UPDATE USERNAME & ensure permissions
 RUN usermod -l TF2Freeplay TF2 &&`
-    find /app -type d -exec chmod 774 {} + &&`
     chmod +x /app/ll-tests/*.sh &&`
-    mkdir -p /app/tf/logs &&`
-    echo "Permissions hacks until 17.09+ makes it into Docker Cloud" &&`
-        chmod -R 774 /app/tf/addons &&`
-        chmod -R 774 /app/tf/cfg &&`
-        chmod -R 774 /app/tf/logs;
+    mkdir -p /app/tf2/logs &&`
+    chmod 774 /app/tf2/logs
 
 USER TF2Freeplay
 
 WORKDIR /app/
+
+CMD ["/bin/bash"]
 
 ONBUILD USER root
