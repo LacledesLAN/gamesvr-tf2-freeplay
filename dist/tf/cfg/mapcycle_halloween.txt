@@ -16,3 +16,5 @@ cp_sunshine_event
 pl_fifthcurve_event
 koth_maple_ridge_event
 pd_pit_of_death_event
+koth_slaughter_event
+pl_precipice_event_final
