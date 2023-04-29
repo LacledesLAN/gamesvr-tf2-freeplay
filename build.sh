@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e
+set -e;
+set -u;
 
 docker pull lacledeslan/gamesvr-tf2:latest
 
