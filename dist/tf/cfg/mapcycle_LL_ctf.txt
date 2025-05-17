@@ -25,7 +25,6 @@ ctf_greystone_b2
 ctf_hallofdeath
 ctf_hellfire
 ctf_landfall
-ctf_landfall_rc
 ctf_launchzone_b2
 ctf_lazer_game
 ctf_nightwatch_b2
