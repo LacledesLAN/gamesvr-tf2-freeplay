@@ -1,4 +1,4 @@
-# Laclede's LAN Team Fortress 2 Dedicated Freeplay Server
+# Laclede's LAN Team Fortress 2 Dedicated Freeplay Server in Docker
 
 ![Laclede's LAN Team Fortress 2 Dedicated Freeplay Server](https://raw.githubusercontent.com/LacledesLAN/gamesvr-tf2-freeplay/master/.misc/banner-tf2-freeplay.png "Laclede's LAN Team Fortress 2 Dedicated Freeplay Server")
 
