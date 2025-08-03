@@ -2,7 +2,7 @@
 
 #####################################################################################################
 ### CONFIG VARS #####################################################################################
-declare LLTEST_CMD="/app/srcds_run -game tf +map koth_lumberyard -insecure -maxplayers 8 -norestart +sv_lan 1";
+declare LLTEST_CMD="/app/srcds_run -game tf +map pl_minepit -insecure -maxplayers 8 -norestart +sv_lan 1";
 declare LLTEST_NAME="gamesvr-tf2-freeplay-$(date '+%H%M%S')";
 #####################################################################################################
 #####################################################################################################
