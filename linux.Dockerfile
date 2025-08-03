@@ -1,6 +1,6 @@
 # escape=`
 
-FROM lacledeslan/steamcmd:linux AS CONTENT-ASSEMBLER
+FROM lacledeslan/steamcmd:linux AS content-assembler
 
 ARG contentServer=content.lacledeslan.net
 
@@ -25,7 +25,7 @@ COPY ./sourcemod-configs /output/tf/
 
 COPY ./dist /output/
 
-COPY ./ll-tests/*.sh /output/ll-tests
+COPY ./ll-tests/*.sh /output/ll-tests/*.sh
 
 FROM lacledeslan/gamesvr-tf2
 
@@ -43,7 +43,7 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
       org.label-schema.description="LL Team Fortress 2 Dedicated Freeplay Server" `
       org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-tf2-freeplay"
 
-COPY --chown=TF2:root --from=CONTENT-ASSEMBLER /output /app
+COPY --chown=TF2:root --from=content-assembler /output /app
 
 # UPDATE USERNAME & ensure permissions
 RUN usermod -l TF2Freeplay TF2 &&`
