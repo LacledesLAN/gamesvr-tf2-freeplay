@@ -1,4 +1,32 @@
 # escape=`
+
+FROM lacledeslan/steamcmd:linux AS CONTENT-ASSEMBLER
+
+ARG contentServer=content.lacledeslan.net
+
+# Download Custom LL TF2 Content
+RUN if [ "$contentServer" = false ] ; then `
+        echo "\n\nSkipping LL custom content\n\n"; `
+    else `
+        echo "\nDownloading custom maps from $contentServer" &&`
+                mkdir --parents /tmp/maps/ /output &&`
+                cd /tmp/maps/ &&`
+                wget -rkpN -l 1 -nH  --no-verbose --cut-dirs=3 -R "*.htm*" -e robots=off "http://"$contentServer"/fastDownloads/tf2-freeplay/maps/" &&`
+            echo "Decompressing files" &&`
+                bzip2 --decompress /tmp/maps/*.bz2 &&`
+            echo "Moving uncompressed files to destination" &&`
+                mkdir --parents /output/tf/maps/ &&`
+                mv --no-clobber *.bsp /output/tf/maps/; `
+    fi;
+
+COPY ./sourcemod.linux /output/tf/
+
+COPY ./sourcemod-configs /output/tf/
+
+COPY ./dist /output/
+
+COPY ./ll-tests/*.sh /output/ll-tests
+
 FROM lacledeslan/gamesvr-tf2
 
 HEALTHCHECK NONE
@@ -15,16 +43,11 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
       org.label-schema.description="LL Team Fortress 2 Dedicated Freeplay Server" `
       org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-tf2-freeplay"
 
-COPY --chown=TF2:root ./sourcemod.linux /app/tf/
-COPY --chown=TF2:root ./sourcemod-configs /app/tf/
-COPY --chown=TF2:root ./dist /app/
-COPY --chown=TF2:root ./ll-tests/*.sh /app/ll-tests
+COPY --chown=TF2:root --from=CONTENT-ASSEMBLER /output /app
 
 # UPDATE USERNAME & ensure permissions
 RUN usermod -l TF2Freeplay TF2 &&`
-    chmod +x /app/ll-tests/*.sh &&`
-    mkdir -p /app/tf2/logs &&`
-    chmod 774 /app/tf2/logs
+    chmod +x /app/ll-tests/*.sh;
 
 USER TF2Freeplay
 
