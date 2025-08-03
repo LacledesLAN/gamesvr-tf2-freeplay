@@ -25,7 +25,7 @@ COPY ./sourcemod-configs /output/tf/
 
 COPY ./dist /output/
 
-COPY ./ll-tests/*.sh /output/ll-tests/*.sh
+COPY ./ll-tests/* /output/ll-tests/*
 
 FROM lacledeslan/gamesvr-tf2
 
