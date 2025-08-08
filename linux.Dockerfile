@@ -25,8 +25,6 @@ COPY ./sourcemod-configs /output/tf/
 
 COPY ./dist /output/
 
-COPY ./ll-tests/ /output/ll-tests/
-
 FROM lacledeslan/gamesvr-tf2
 
 HEALTHCHECK NONE
