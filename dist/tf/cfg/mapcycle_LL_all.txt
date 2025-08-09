@@ -100,7 +100,6 @@ ctf_thundermountain
 ctf_turbine
 ctf_turbine_winter
 ctf_well
-itemtest
 koth_badlands
 koth_bagel_event
 koth_blowout
@@ -120,12 +119,12 @@ koth_lazarus
 koth_lolcano_b3
 koth_los_muertos
 koth_lumberyard
-koth_mannhole
 koth_maple_ridge_event
 koth_megalo
 koth_megaton
 koth_mineriver_rc3
 koth_moonshine_event
+koth_mannhole
 koth_nucleus
 koth_overcast_final
 koth_pacman_wtf_b2
@@ -148,13 +147,6 @@ koth_turbine
 koth_undergrove_event
 koth_viaduct
 koth_viaduct_event
-mvm_bigrock
-mvm_coaltown
-mvm_decoy
-mvm_ghost_town
-mvm_mannhattan
-mvm_mannworks
-mvm_rottenburg
 pass_brickyard
 pass_district
 pass_timbertown
@@ -168,6 +160,7 @@ pd_monster_bash
 pd_pit_of_death_event
 pd_selbyen
 pd_snowville_event
+pd_watergate
 pl_aquarius
 pl_badwater
 pl_barnblitz
@@ -193,11 +186,8 @@ pl_gibraltar
 pl_goldrush
 pl_hasslecastle
 pl_hoodoo_final
-pl_highwind_a5
-pl_lumberyard_b1
 pl_millstone_event
 pl_minepit
-pl_nightfall_final
 pl_norad
 pl_odyssey
 pl_patagonia
@@ -224,6 +214,7 @@ plr_hacksaw
 plr_hacksaw_event
 plr_hightower
 plr_hightower_event
+plr_highwind_a5
 plr_lumberyard_b1
 plr_nightfall_final
 plr_panic_b2
