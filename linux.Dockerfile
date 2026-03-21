@@ -41,15 +41,15 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
       org.label-schema.description="LL Team Fortress 2 Dedicated Freeplay Server" `
       org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-tf2-freeplay"
 
-COPY --chown=TF2:root --from=content-assembler /output /app
+COPY --chown=TF2:root --from=content-assembler /output /app/tf2
 
 # UPDATE USERNAME & ensure permissions
 RUN usermod -l TF2Freeplay TF2 &&`
-    chmod +x /app/ll-tests/*.sh;
+    chmod +x /app/tf2/ll-tests/*.sh;
 
 USER TF2Freeplay
 
-WORKDIR /app/
+WORKDIR /app/tf2/
 
 CMD ["/bin/bash"]
 
