@@ -23,20 +23,24 @@ COPY ./sourcemod-configs /output/tf/
 
 COPY ./dist /output/
 
+
+#---------------------------------
 FROM lacledeslan/gamesvr-tf2
 
 HEALTHCHECK NONE
 
-ARG BUILD_NODE=unspecified
-ARG GIT_REVISION=unspecified
+ARG BUILD_DATE=unspecified \
+    BUILD_NODE=unspecified \
+    GIT_REVISION=unspecified
 
 LABEL architecture="amd64" \
-    com.lacledeslan.build-node=$BUILD_NODE \
-    maintainer="Laclede's LAN <contact@lacledeslan.com>" \
-    org.opencontainers.image.description="Laclede's LAN Team Fortress 2 Dedicated Freeplay Server" \
-    org.opencontainers.image.revision=$GIT_REVISION \
-    org.opencontainers.image.source="https://github.com/LacledesLAN/gamesvr-tf2-freeplay" \
-    org.opencontainers.image.vendor="Laclede's LAN"
+      com.lacledeslan.build-node=$BUILD_NODE \
+      maintainer="Laclede's LAN <contact@lacledeslan.com>" \
+      org.opencontainers.image.created="$BUILD_DATE" \
+      org.opencontainers.image.description="Laclede's LAN Team Fortress 2 Dedicated Freeplay Server" \
+      org.opencontainers.image.revision=$GIT_REVISION \
+      org.opencontainers.image.source="https://github.com/LacledesLAN/gamesvr-tf2-freeplay" \
+      org.opencontainers.image.vendor="Laclede's LAN"
 
 COPY --chown=TF2:root --from=content-assembler /output /app/tf2
 
