@@ -53,5 +53,3 @@ USER TF2Freeplay
 WORKDIR /app/tf2/
 
 CMD ["/bin/bash"]
-
-ONBUILD USER root
