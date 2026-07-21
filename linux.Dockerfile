@@ -1,15 +1,15 @@
 FROM lacledeslan/steamcmd:linux AS content-assembler
 
-ARG contentServer=content.lacledeslan.net
+ARG CONTENT_SERVER=content.lacledeslan.net
 
 # Download Custom LL TF2 Content
-RUN if [ "$contentServer" = false ] ; then \
+RUN if [ "$CONTENT_SERVER" = false ] ; then \
         echo "\n\nSkipping LL custom content\n\n"; \
     else \
-        echo "\nDownloading custom maps from $contentServer" && \
+        echo "\nDownloading custom maps from $CONTENT_SERVER" && \
                 mkdir --parents /tmp/maps/ /output && \
                 cd /tmp/maps/ && \
-                wget -rkpN -l 1 -nH  --no-verbose --cut-dirs=3 -R "*.htm*" -e robots=off "http://"$contentServer"/fastDownloads/tf2-freeplay/maps/" && \
+                wget -rkpN -l 1 -nH  --no-verbose --cut-dirs=3 -R "*.htm*" -e robots=off "http://"$CONTENT_SERVER"/fastDownloads/tf2-freeplay/maps/" && \
             echo "Decompressing files" && \
                 bzip2 --decompress /tmp/maps/*.bz2 && \
             echo "Moving uncompressed files to destination" && \
