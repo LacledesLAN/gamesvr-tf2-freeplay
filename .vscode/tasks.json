@@ -45,7 +45,7 @@
         {
             "label": "Download git submodules",
             "type": "shell",
-            "command": "git submodule foreach git pull origin master;",
+            "command": "git submodule foreach git pull origin main;",
             "problemMatcher": [],
             "promptOnClose": true
         },
