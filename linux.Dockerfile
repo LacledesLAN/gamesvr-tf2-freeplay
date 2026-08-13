@@ -1,3 +1,5 @@
+ARG PARENT_IMAGE=lacledeslan/gamesvr-tf2:latest
+
 FROM lacledeslan/steamcmd:linux AS content-assembler
 
 ARG CONTENT_SERVER=content.lacledeslan.net
@@ -25,7 +27,7 @@ COPY ./dist /output/
 
 
 #---------------------------------
-FROM lacledeslan/gamesvr-tf2
+FROM ${PARENT_IMAGE}
 
 HEALTHCHECK NONE
 
